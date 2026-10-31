@@ -28,7 +28,7 @@ Our goal is to make finding lost items easier, faster, and more organized throug
 1. Clone this repository:
 
    ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
+   https://github.com/anshikapandya-rgb/Lost_Found.git
    ```
 
 2. Open the project folder.
