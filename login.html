@@ -4,23 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoundIt - Login</title>
+    <title>FoundIt - Sign In / Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <h2>Campus Member Sign In</h2>
+
+    <div class="form-card">
+        <h2>Campus Member Access</h2>
+        <p><small>Secure authentication for Avantika University students & faculty.</small></p>
+
         <form>
-            <label>University Email</label><br>
-            <input type="email" placeholder="name@college.edu.in"><br><br>
-            <label>Password</label><br>
-            <input type="password" placeholder="••••••••"><br><br>
-            <button type="submit">Login</button>
+            <label><strong>University Email Address</strong></label>
+            <input type="email" placeholder="student@avantika.edu.in" required>
+
+            <label><strong>Password</strong></label>
+            <input type="password" placeholder="••••••••" required>
+
+            <button type="submit" style="width: 100%;">Authenticate to FoundIt</button>
         </form>
-        <br>
-        <a href="index.html">← Back to Home</a>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <p style="text-align: center; font-size: 0.9rem;">
+            New to campus registry? <a href="#" style="color: #1b4332; font-weight: bold;">Create an account</a>
+        </p>
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="index.html" style="color: #718096; text-decoration: none;">← Back to Home</a>
+        </div>
     </div>
+
 </body>
 
 </html>
