@@ -155,3 +155,30 @@ header nav a:hover {
 .form-card button:hover {
     background-color: #444444;
 }
+/* Logo & Brand Layout in Header */
+/* Stacked Logo & Brand Layout in Header */
+.logo-brand {
+    display: flex;
+    flex-direction: column;
+    /* Switches from side-by-side to stacked */
+    align-items: flex-start;
+    /* Align everything to the left (change to center if you want it centered) */
+    text-decoration: none;
+    color: #2d3748;
+    gap: 4px;
+    /* Tiny gap between the logo and the text below it */
+}
+
+.logo-brand img {
+    height: 32px;
+    /* Adjust height so it doesn't look massive stacked */
+    width: auto;
+}
+
+.logo-brand h2 {
+    margin: 0;
+    font-size: 1.1rem;
+    /* Slightly smaller so it balances nicely under the image */
+    font-weight: 700;
+    color: #1b4332;
+}
