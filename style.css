@@ -102,3 +102,56 @@ header nav a:hover {
 .search-box button:hover {
     background-color: #2d6a4f;
 }
+
+/* Centered Form Card Layout (Monochrome / No Color Added) */
+.form-card {
+    background: #ffffff;
+    max-width: 420px;
+    margin: 70px auto;
+    padding: 40px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-card h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.6rem;
+}
+
+.form-card p {
+    margin: 0 0 25px 0;
+    color: #555555;
+}
+
+.form-card label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background-color: #444444;
+}
