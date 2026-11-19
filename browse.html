@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoundIt - Browse Items</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-brand">
+            <img src="logo.png" alt="Avantika University Logo">
+            <h2>FoundIt</h2>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Items</a>
+            <a href="report.html">Report Item</a>
+            <a href="login.html">Sign In</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="browse-header">
+            <h2>Campus Property Registry</h2>
+            <p>Live feed of reported lost and discovered items across Avantika University.</p>
+        </div>
+
+        <!-- JavaScript will inject item cards right here -->
+        <div id="items-grid" class="items-grid"></div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
