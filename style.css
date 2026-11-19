@@ -182,3 +182,84 @@ header nav a:hover {
     font-weight: 700;
     color: #1b4332;
 }
+
+/* Browse Items Page Styling */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.browse-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #cbd5e0;
+    padding-bottom: 15px;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.item-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.status-tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.status-tag.lost {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.status-tag.found {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.item-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+}
+
+.item-card .meta {
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin-bottom: 12px;
+}
+
+.item-card .desc {
+    font-size: 0.95rem;
+    color: #2d3748;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #edf2f7;
+    padding-top: 12px;
+}
+
+.card-footer button {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+}
