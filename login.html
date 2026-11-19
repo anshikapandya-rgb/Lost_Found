@@ -10,16 +10,31 @@
 
 <body>
 
-    <div class="form-card">
+    <!-- Consistent Header Navigation -->
+    <header>
+        <a href="index.html" class="logo-brand">
+            <img src="logo.png" alt="Avantika University Logo">
+            <h2>FoundIt</h2>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Items</a>
+            <a href="report.html">Report Item</a>
+            <a href="login.html">Sign In</a>
+        </nav>
+    </header>
+
+    <!-- Login Card -->
+    <div class="form-card" id="login-box">
         <h2>Campus Member Access</h2>
         <p><small>Secure authentication for Avantika University students & faculty.</small></p>
 
-        <form>
+        <form id="login-form">
             <label><strong>University Email Address</strong></label>
-            <input type="email" placeholder="student@avantika.edu.in" required>
+            <input type="email" id="login-email" placeholder="student@avantika.edu.in" required>
 
             <label><strong>Password</strong></label>
-            <input type="password" placeholder="••••••••" required>
+            <input type="password" id="login-password" placeholder="••••••••" required>
 
             <button type="submit" style="width: 100%;">Authenticate to FoundIt</button>
         </form>
@@ -27,12 +42,72 @@
         <hr style="margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;">
 
         <p style="text-align: center; font-size: 0.9rem;">
-            New to campus registry? <a href="#" style="color: #1b4332; font-weight: bold;">Create an account</a>
+            New to campus registry? <a href="#" id="show-register" style="color: #1b4332; font-weight: bold;">Create an
+                account</a>
         </p>
-        <div style="text-align: center; margin-top: 15px;">
-            <a href="index.html" style="color: #718096; text-decoration: none;">← Back to Home</a>
-        </div>
     </div>
+
+    <!-- Hidden Registration Card (Shows when user clicks "Create an account") -->
+    <div class="form-card" id="register-box" style="display: none;">
+        <h2>Register Campus Account</h2>
+        <p><small>Create a verified profile to track your lost & found reports.</small></p>
+
+        <form id="register-form">
+            <label><strong>Full Name</strong></label>
+            <input type="text" id="reg-name" placeholder="e.g. Aarav Sharma" required>
+
+            <label><strong>University Email Address</strong></label>
+            <input type="email" id="reg-email" placeholder="student@avantika.edu.in" required>
+
+            <label><strong>Enrollment / Employee ID</strong></label>
+            <input type="text" id="reg-id" placeholder="e.g. AU2024001" required>
+
+            <button type="submit" style="width: 100%;">Complete Registration</button>
+        </form>
+
+        <hr style="margin: 25px 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+        <p style="text-align: center; font-size: 0.9rem;">
+            Already have an account? <a href="#" id="show-login" style="color: #1b4332; font-weight: bold;">Sign In</a>
+        </p>
+    </div>
+
+    <script>
+        // Toggle between Sign In and Register forms
+        const loginBox = document.getElementById("login-box");
+        const registerBox = document.getElementById("register-box");
+
+        document.getElementById("show-register").addEventListener("click", (e) => {
+            e.preventDefault();
+            loginBox.style.display = "none";
+            registerBox.style.display = "block";
+        });
+
+        document.getElementById("show-login").addEventListener("click", (e) => {
+            e.preventDefault();
+            registerBox.style.display = "none";
+            loginBox.style.display = "block";
+        });
+
+        // Simulate real user login
+        document.getElementById("login-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const email = document.getElementById("login-email").value;
+            localStorage.setItem("foundit_user", email);
+            alert("Welcome back, " + email + "! You are now signed in.");
+            window.location.href = "browse.html";
+        });
+
+        // Simulate new user registration
+        document.getElementById("register-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("reg-name").value;
+            const email = document.getElementById("reg-email").value;
+            localStorage.setItem("foundit_user", email);
+            alert("Account created for " + name + "! Redirecting to registry...");
+            window.location.href = "browse.html";
+        });
+    </script>
 
 </body>
 

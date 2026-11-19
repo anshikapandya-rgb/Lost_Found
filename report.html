@@ -10,43 +10,54 @@
 
 <body>
 
+    <header>
+        <a href="index.html" class="logo-brand">
+            <img src="logo.png" alt="Avantika University Logo">
+            <h2>FoundIt</h2>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="browse.html">Browse Items</a>
+            <a href="report.html">Report Item</a>
+            <a href="login.html">Sign In</a>
+        </nav>
+    </header>
+
     <div class="form-card" style="max-width: 600px;">
         <h2>Register Property Record</h2>
         <p><small>Submit details for a lost or discovered item on campus grounds.</small></p>
 
-        <form>
+        <form id="report-form">
             <label><strong>Report Type</strong></label>
-            <select required>
+            <select id="report-type" required>
                 <option value="lost">I lost an item</option>
                 <option value="found">I found and turned in an item</option>
             </select>
 
             <label><strong>Item Name / Title</strong></label>
-            <input type="text" placeholder="e.g. Casio Scientific Calculator / Blue Hydro Flask" required>
+            <input type="text" id="item-name" placeholder="e.g. Casio Scientific Calculator" required>
 
             <label><strong>Category</strong></label>
-            <select required>
-                <option value="electronics">Electronics & Gadgets</option>
-                <option value="stationery">Books & Stationery</option>
-                <option value="personal">ID Cards & Personal Belongings</option>
-                <option value="clothing">Clothing & Accessories</option>
+            <select id="item-category" required>
+                <option value="Electronics & Gadgets">Electronics & Gadgets</option>
+                <option value="Books & Stationery">Books & Stationery</option>
+                <option value="Personal Belongings">ID Cards & Personal Belongings</option>
+                <option value="Clothing & Accessories">Clothing & Accessories</option>
             </select>
 
             <label><strong>Campus Location Last Seen / Found</strong></label>
-            <input type="text" placeholder="e.g. Design Studio 3 or Central Library 2nd Floor" required>
+            <input type="text" id="item-location" placeholder="e.g. Design Studio 3 or Central Library 2nd Floor"
+                required>
 
             <label><strong>Detailed Description</strong></label>
-            <textarea rows="4" placeholder="Mention color, brand, stickers, or unique identifying marks..."
-                required></textarea>
+            <textarea id="item-desc" rows="4"
+                placeholder="Mention color, brand, stickers, or unique identifying marks..." required></textarea>
 
             <button type="submit" style="width: 100%;">Submit Official Report</button>
         </form>
-
-        <div style="text-align: center; margin-top: 15px;">
-            <a href="index.html" style="color: #718096; text-decoration: none;">← Back to Home</a>
-        </div>
     </div>
 
+    <script src="app.js"></script>
 </body>
 
 </html>
